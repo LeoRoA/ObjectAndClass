@@ -13,11 +13,11 @@ public class Book {
     }
 
     public String getTitle() {
-        return this.title;
+        return title;
     }
 
     public int getPublicationYear() {
-        return this.publicationYear;
+        return publicationYear;
     }
 
     public void setPublicationYear(int publicationYear) {
@@ -25,11 +25,11 @@ public class Book {
     }
 
     public Author getAuthor() {
-        return this.author;
+        return author;
     }
 
     public String toString() {
-        return this.title + " by " + this.author + " published in " + this.publicationYear;
+        return title + " by " + author + " published in " + publicationYear;
     }
 
     @Override
@@ -37,11 +37,12 @@ public class Book {
         if (this == o) return true;
         if (!(o instanceof Book)) return false;
         Book book = (Book) o;
-        return getPublicationYear() == book.getPublicationYear() && getTitle().equals(book.getTitle()) && getAuthor().equals(book.getAuthor());
+        return publicationYear == book.publicationYear && title.equals(book.title) &&
+                author.equals(book.author);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getTitle(), getAuthor(), getPublicationYear());
+        return Objects.hash(title, author, publicationYear);
     }
 }

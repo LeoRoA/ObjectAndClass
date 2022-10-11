@@ -11,19 +11,19 @@ public class Author {
     }
 
     public String getFirstName() {
-        return this.firstName;
+        return firstName;
     }
 
     public String getLastName() {
-        return this.lastName;
+        return lastName;
     }
 
     /*public String getFullName() {
-        return this.firstName + ' ' + this.lastName;
+        return firstName + ' ' + lastName;
     }*/
 
     public String toString() {
-        return this.firstName + " " + this.lastName ;
+        return firstName + " " + lastName;
     }
 
     @Override
@@ -31,8 +31,8 @@ public class Author {
         if (this == o) return true;
         if (!(o instanceof Author)) return false;
         Author author = (Author) o;
-        return Objects.equals(getFirstName(), author.getFirstName()) &&
-                Objects.equals(getLastName(), author.getLastName());
+        return Objects.equals(firstName, author.firstName) &&
+                Objects.equals(lastName, author.lastName);
     }
 
     //@Override
